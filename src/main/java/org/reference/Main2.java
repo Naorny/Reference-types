@@ -13,7 +13,6 @@ public class Main2 {
 
         System.out.print("Enter the string with spaces: ");
         String[] words = scan.nextLine().split(" ");
-        // System.out.println(Arrays.toString(words));
         System.out.println("The longest word is: " + words[findLongestWord(words)]);
     }
 
