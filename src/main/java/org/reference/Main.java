@@ -14,15 +14,18 @@ public class Main {
         System.out.print("Enter the string: ");
         String str1 = scan.nextLine();
         int length = str1.length();
-        System.out.println("The first character is <" + str1.charAt(0) + ">");
-        System.out.println("The last character is <" + str1.charAt(length-1) + ">");
-
-        if(length % 2 != 0){
-            System.out.println("The middle character is <" + str1.charAt(length / 2) + ">");
+        System.out.println("The first character: " + str1.charAt(0));
+        System.out.println("The last character: " + str1.charAt(length - 1));
+        if(length != 2){
+            System.out.print("The middle characters are: ");
+            int i;
+            for(i = 1; i < (length - 1); i++)
+               System.out.print(str1.charAt(i));
+            if (i == (length - 1))
+               System.out.print("\n");
         }else{
-            System.out.println("There is not a middle character");
+            System.out.println("There are no middle characters");
         }
-
         int spaceCount = 0;
         for (char c : str1.toCharArray()) {
             if (c == ' '){
@@ -35,6 +38,5 @@ public class Main {
         str2 = str1.split("\\.")[0];
 
             System.out.println("The string up to dot with the dot: " + str2 + ".");
-
     }
 }
